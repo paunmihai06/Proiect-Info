@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+// se declara variabilele n, ogl si cn de tip intreg
+// variabila n memoreaza numarul introdus de la tastatura
+// variabila cn memoreaza copia lui n
+// variabila ogl memoreaza oglinditul / inversul lui n
+int n, ogl, cn;
+int main()
+{
+cout<<"Introduceti numarul n: ";
+// se citeste numarul n
+cin >> n;
+// copiem valoarea lui n
+cn=n;
+//construirea oglinditului
+while (n != 0)
+    {
+        ogl = ogl * 10 + n % 10; // se inverseaza cifra cu cifra numarul n
+        n = n / 10; // se taie pe rand cifrele lui n
+    }
+//testul de palindrom + afisarea mesajului corespunzator
+if(cn==ogl)
+    cout<<"Numarul este palindrom";
+else
+    cout<<"Numarul nu este palindrom";
+return 0;
+}
