@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+//se declara variabilele a,b,x,y de tip intreg
+//variabilele a si b memoreaza cele 2 numere introduse de la tastatura
+//variabilele x si y memoreaza copia numerelor a si b
+int a,b,x,y;
+int main()
+{
+// se citesc numerele a si b
+cout<<"Introduceti numerele a si b: "<<endl;
+cin>>a>>b;
+// se copiaza numerele a si b in variabilele x si y
+x=a;
+y=b;
+// se determina cmmdc-ul dintre a si b folosind variabilele x si y
+while(x!=y)
+    {
+        if(x>y)
+            x=x-y;
+        else
+            y=y-x;
+    }
+// in urma executarii instructiunii while cmmdc-ul este memorat acum in variabila x
+// se afiseaza cmmmc dintre cele doua numere folosind formula de determinare acestuia cu ajutorul cmmdc
+cout<<"cmmmc = "<<(a*b)/x;
+}
