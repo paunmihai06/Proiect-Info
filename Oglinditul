@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+// se declara variabilele n si ogl de tip intreg
+// variabila n memoreaza numarul introdus de la tastatura
+// variabila ogl memoreaza oglinditul / inversul numarului n
+int n, ogl;
+int main()
+{
+cout<<"Introduceti numarul n: ";
+// se citeste numarul n
+cin >> n;
+// se construieste oglinditul / inversul lui n
+while (n != 0)
+	{
+		ogl = ogl * 10 + n % 10; // se inverseaza cifra cu cifra numarul
+		n = n / 10; // se taie pe rand cifrele numarului
+	}
+// se afiseaza oglinditul lui n
+cout << "Oglinditul numarului 'n' este: "<< ogl;
+return 0;
+}
